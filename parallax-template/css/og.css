@@ -12,11 +12,10 @@ a.btn, a.btn-large, a.btn-small {
   cursor: pointer;
 }
 
-.btn:hover, .btn-large:hover, .btn-small:hover, {
+.btn:hover, .btn-large:hover, .btn-small:hover {
   background-color: #795548;
 }
 
-.btn:focus, .btn-large:focus, .btn-small:focus,
-.btn-floating:focus {
+.btn:focus, .btn-large:focus, .btn-small:focus, .btn-floating:focus {
   background-color: #4e342e;
 }
