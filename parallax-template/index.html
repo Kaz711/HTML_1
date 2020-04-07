@@ -197,16 +197,16 @@
       </div>
 
       <!--   FABs in Cards   -->
-      <div class="row">
+      <div class="row" id="wp_post_container">
         <div class="col s12 m4 wp_post_base">
           <div class="card">
             <div class="card-image">
               <img src="images/background_4.jpg" class="wp_post_image">
-              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+              <a class="btn-floating halfway-fab waves-effect waves-light red wp_post_link"><i class="material-icons">add</i></a>
             </div>
             <div class="card-content">
               <span class="card-title wp_post_title"></span>
-              <p class="wo_post_content"></p>
+              <p class="wp_post_content"></p>
             </div>
           </div>
         </div>
@@ -303,6 +303,13 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script src="js/wp_post_get.js"></script>
+  <script>
+    $(document).ready(function(){
+      wpPostBuilder.data_count = 3;
+      wpPostBuilder.exec_wp_post_get();
+    })
+  </script>
 
   </body>
 </html>
