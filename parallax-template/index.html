@@ -4,12 +4,11 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Portfolio - OUNE</title>
-
-  <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/og.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
   <nav class="white" role="navigation">
@@ -137,28 +136,28 @@
             <div class="slider">
               <ul class="slides">
                 <li>
-                  <a href="#"><img src="https://lorempixel.com/580/250/nature/1"><!-- random image --></a>
+                  <a href="#"><img src="images/dummy1.jpg"><!-- random image --></a>
                     <div class="caption center-align">
                       <h3>This is our big Tagline!</h3>
                       <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
                     </div>
                 </li>
                 <li>
-                  <a href="#"><img src="https://lorempixel.com/580/250/nature/2"><!-- random image --></a>
+                  <a href="#"><img src="images/dummy2.jpg"><!-- random image --></a>
                     <div class="caption left-align">
                       <h3>Left Aligned Caption</h3>
                       <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
                     </div>
                 </li>
                 <li>
-                  <a href="#"><img src="https://lorempixel.com/580/250/nature/3"><!-- random image --></a>
+                  <a href="#"><img src="images/dummy3.jpg"><!-- random image --></a>
                     <div class="caption right-align">
                       <h3>Right Aligned Caption</h3>
                       <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
                     </div>
                 </li>
                 <li>
-                  <a href="#"><img src="https://lorempixel.com/580/250/nature/4"><!-- random image --></a>
+                  <a href="#"><img src="images/dummy4.jpg"><!-- random image --></a>
                     <div class="caption center-align">
                       <h3>This is our big Tagline!</h3>
                       <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
@@ -220,7 +219,7 @@
             <h5 class="center">View blog</h5>
             <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
               <div class="row center">
-                <a class="waves-effect waves-light btn-large center-align" href="https://kazumi-o.github.io/HTML_1/mdl-template-blog/"><i class="material-icons left">navigate_next</i>NEXT</a>
+                <a class="waves-effect waves-light btn-large center-align" href="./blog/"><i class="material-icons left">navigate_next</i>NEXT</a>
               </div>
           </div>
         </div>
@@ -298,7 +297,6 @@
     </div>
   </footer>
 
-
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
@@ -310,6 +308,76 @@
       wpPostBuilder.exec_wp_post_get();
     })
   </script>
+
+<!-- Scroll btn -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+<div id="page_top"><a href="#"></a></div>
+
+<!-- <p class="pagetop"><a href="#wrap">▲</a></p> -->
+<script>
+$(document).ready(function() {
+  var page_top = $('#page_top');
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 100) {
+            page_top.fadeIn();
+       } else {
+            page_top.fadeOut();
+            }
+       });
+       page_top.click(function () {
+           $('body, html').animate({ scrollTop: 0 }, 1500);
+              return false;
+   });
+});
+</script>
+<style>
+  #page_top{
+    display: none;
+    width: 90px;
+    height: 90px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #F44336;
+    opacity: 0.8;
+    border-radius: 50%;
+  }
+  #page_top a{
+    position: relative;
+    display: block;
+    width: 90px;
+    height: 90px;
+    text-decoration: none;
+  }
+  #page_top a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -40px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+  #page_top a::after{
+    content: 'PAGE TOP';
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    top: 45px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+</style>
 
   </body>
 </html>

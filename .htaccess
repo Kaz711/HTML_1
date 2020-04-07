@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Input your ID and Password."
+AuthUserFile /home/oune/www/portfolio/.htpasswd
+require valid-user 
